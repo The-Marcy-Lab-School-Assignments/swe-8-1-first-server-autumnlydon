@@ -1,11 +1,14 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 
 const logRoutes = (req, res, next) => {
   const date = new Date().toLocaleString();
   console.log(`Method: ${req.method} URL: ${req.url} Date: ${date}`);
   next();
 };
+const filepath = path.join(__dirname, "../app/dist/");
+app.use(express.static(filepath));
 app.use(logRoutes);
 
 const servePicture = (req, res) => {
@@ -23,8 +26,9 @@ const serveJoke = (req, res) => {
 
 const serveRollDie = (req, res) => {
   const { quantity } = req.query;
+  const length = Number(quantity) > 0 ? Number(quantity) : 1;
   const rolls = [];
-  for (let i = 0; i < quantity; i++) {
+  for (let i = 0; i < length; i++) {
     let diceRoll = Math.floor(Math.random() * 6 + 1);
     rolls.push(diceRoll);
   }

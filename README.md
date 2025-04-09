@@ -58,13 +58,13 @@ You got this!
 - [x] The server has a `GET /api/joke` endpoint that responds with a joke of your choosing!
 - [x] The server has a `GET /api/picture` endpoint that responds with the URL of a picture of your choosing (use a URL from the internet!)
 - [x] The server has a `GET /api/rollDie` endpoint that responds with an array containing a random dice roll.
-- [ ] The `GET /api/rollDie` endpoint uses a `?quantity=` query parameter to specif the number of die rolls to be added to the `rolls` array.
+- [x] The `GET /api/rollDie` endpoint uses a `?quantity=` query parameter to specif the number of die rolls to be added to the `rolls` array.
 
 **Static Assets Requirements**
 
-- [ ] The root of the repository contains a Vite + React application. The folder containing the project is a sibling of `server`
-- [ ] The `path` module and `__dirname` are used to generate an absolute path to the `dist/` folder of your React application
-- [ ] The `express.static()` middleware serves the static assets in the React application's `dist/` folder.
+- [x] The root of the repository contains a Vite + React application. The folder containing the project is a sibling of `server`
+- [x] The `path` module and `__dirname` are used to generate an absolute path to the `dist/` folder of your React application
+- [x] The `express.static()` middleware serves the static assets in the React application's `dist/` folder.
 
 **Deployment Technical Requirements**
 
